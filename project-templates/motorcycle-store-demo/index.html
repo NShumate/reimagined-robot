@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MotoSphere | Local Motorcycle Demo</title>
+    <meta
+      name="description"
+      content="A local-only motorcycle storefront demo for showcasing mock inventory and branding."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <a href="#" class="brand">MotoSphere</a>
+        <div class="nav-links">
+          <a href="#inventory">Inventory</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Local demo • Not for production</p>
+          <h1>Ride into your next chapter with a bold motorcycle storefront.</h1>
+          <p>
+            This demo showcases a polished motorcycle sales experience with curated
+            inventory, a premium feel, and reusable branding assets.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#inventory">Explore bikes</a>
+            <a class="btn btn-secondary" href="#about">Why this demo</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Featured today</h3>
+          <p>Midnight Edition • 2024</p>
+          <ul>
+            <li>Fast delivery demo</li>
+            <li>Flexible financing preview</li>
+            <li>Local pickup experience</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats container" id="about">
+        <div>
+          <strong>12+</strong>
+          <span>mock bikes</span>
+        </div>
+        <div>
+          <strong>24/7</strong>
+          <span>demo support</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>local-only hosting</span>
+        </div>
+      </section>
+
+      <section class="inventory container" id="inventory">
+        <div class="section-heading">
+          <p class="eyebrow">Curated inventory</p>
+          <h2>Browse featured motorcycles</h2>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Motorcycle filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="sport">Sport</button>
+          <button class="filter" data-filter="adventure">Adventure</button>
+          <button class="filter" data-filter="cruiser">Cruiser</button>
+          <button class="filter" data-filter="retro">Retro</button>
+        </div>
+
+        <div class="query-panel">
+          <div class="query-controls">
+            <label class="select-group">
+              <span>Search</span>
+              <input id="search-filter" type="text" placeholder="Search make, model, or style" />
+            </label>
+            <label class="select-group">
+              <span>Make</span>
+              <select id="make-filter">
+                <option value="all">All makes</option>
+              </select>
+            </label>
+            <label class="select-group">
+              <span>Model</span>
+              <select id="model-filter">
+                <option value="all">All models</option>
+              </select>
+            </label>
+            <label class="select-group">
+              <span>Style</span>
+              <select id="style-filter">
+                <option value="all">All styles</option>
+              </select>
+            </label>
+            <label class="select-group">
+              <span>Era</span>
+              <select id="era-filter">
+                <option value="all">All eras</option>
+              </select>
+            </label>
+            <button id="apply-filters" class="btn btn-primary small">Run demo query</button>
+          </div>
+
+          <div id="query-preview" class="query-preview">
+            Query preview: SELECT * FROM motorcycles WHERE 1=1;
+          </div>
+        </div>
+
+        <div id="bike-grid" class="bike-grid"></div>
+      </section>
+
+      <section class="compare container">
+        <div class="section-heading">
+          <p class="eyebrow">Compare bikes</p>
+          <h2>Select two motorcycles</h2>
+        </div>
+
+        <div class="compare-controls">
+          <label class="select-group">
+            <span>Bike 1</span>
+            <select id="compare-one"></select>
+          </label>
+          <label class="select-group">
+            <span>Bike 2</span>
+            <select id="compare-two"></select>
+          </label>
+        </div>
+
+        <div id="compare-output" class="compare-output"></div>
+      </section>
+
+      <section class="cta container" id="contact">
+      </section>
+
+      <section class="cta container" id="contact">
+        <div>
+          <p class="eyebrow">Ready to prototype</p>
+          <h2>Create your own storefront experience locally.</h2>
+        </div>
+        <a class="btn btn-primary" href="#">Start your demo</a>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© 2026 MotoSphere demo • Built for local-only preview.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
