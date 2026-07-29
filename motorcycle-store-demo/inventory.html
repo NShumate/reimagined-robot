@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TraderRaiders | Inventory</title>
+    <meta
+      name="description"
+      content="Dedicated inventory page for TraderRaiders with filtering, search, and compare tools."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="banner" aria-label="BROTHERRR banner">BROTHERRR</div>
+    <header class="hero">
+      <nav class="nav container">
+        <a href="index.html" class="brand">TraderRaiders</a>
+        <div class="nav-links">
+          <a href="inventory.html">Inventory</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </nav>
+
+      <div class="container page-intro">
+        <p class="eyebrow">TraderRaiders inventory</p>
+        <h1>Browse the lineup and find the ride that matches your next move.</h1>
+        <p>
+          This inventory page is built as a dedicated experience for exploring the current lineup.
+          Filter by style, search by make or model, and compare your favorites side by side.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="inventory container" id="inventory">
+        <div class="section-heading">
+          <p class="eyebrow">Curated inventory</p>
+          <h2>Browse featured motorcycles</h2>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Motorcycle filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="sport">Sport</button>
+          <button class="filter" data-filter="adventure">Adventure</button>
+          <button class="filter" data-filter="cruiser">Cruiser</button>
+          <button class="filter" data-filter="retro">Retro</button>
+        </div>
+
+        <div class="query-panel">
+          <div class="query-controls">
+            <label class="select-group">
+              <span>Search</span>
+              <input id="search-filter" type="text" placeholder="Search make, model, or style" />
+            </label>
+            <label class="select-group">
+              <span>Make</span>
+              <select id="make-filter">
+                <option value="all">All makes</option>
+              </select>
+            </label>
+            <label class="select-group">
+              <span>Model</span>
+              <select id="model-filter">
+                <option value="all">All models</option>
+              </select>
+            </label>
+            <label class="select-group">
+              <span>Style</span>
+              <select id="style-filter">
+                <option value="all">All styles</option>
+              </select>
+            </label>
+            <label class="select-group">
+              <span>Era</span>
+              <select id="era-filter">
+                <option value="all">All eras</option>
+              </select>
+            </label>
+            <button id="apply-filters" class="btn btn-primary small">Run demo query</button>
+          </div>
+
+          <div id="query-preview" class="query-preview">
+            Query preview: SELECT * FROM motorcycles WHERE 1=1;
+          </div>
+        </div>
+
+        <div id="bike-grid" class="bike-grid"></div>
+      </section>
+
+      <section class="compare container">
+        <div class="section-heading">
+          <p class="eyebrow">Compare bikes</p>
+          <h2>Select two motorcycles</h2>
+        </div>
+
+        <div class="compare-controls">
+          <label class="select-group">
+            <span>Bike 1</span>
+            <select id="compare-one"></select>
+          </label>
+          <label class="select-group">
+            <span>Bike 2</span>
+            <select id="compare-two"></select>
+          </label>
+        </div>
+
+        <div id="compare-output" class="compare-output"></div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© 2026 TraderRaiders demo • Built for local preview.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
