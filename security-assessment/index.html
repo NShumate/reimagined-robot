@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TraderRaiders | AWS 800-53 Security Review</title>
+    <meta
+      name="description"
+      content="A security assessment demo for the TraderRaiders storefront using AWS 800-53 control themes."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="banner">BROTHERRR</div>
+    <header class="hero">
+      <nav class="nav container">
+        <a href="../motorcycle-store-demo/index.html" class="brand">TraderRaiders</a>
+        <div class="nav-links">
+          <a href="../motorcycle-store-demo/index.html">Storefront</a>
+          <a href="../motorcycle-store-demo/inventory.html">Inventory</a>
+          <a href="index.html">Security Review</a>
+        </div>
+      </nav>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AWS 800-53 style review</p>
+          <h1>Security posture test for the local TraderRaiders storefront.</h1>
+          <p>
+            This companion site evaluates the current demo as if it were being reviewed for AWS-aligned security controls.
+            It focuses on what is present today, what is missing, and what would be required in production.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#controls">Review controls</a>
+            <a class="btn btn-secondary" href="#findings">See findings</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Current posture</h3>
+          <p>Local demo • Static site • No production controls</p>
+          <ul>
+            <li>Static HTML, CSS, and JavaScript</li>
+            <li>No authentication or role-based access</li>
+            <li>No TLS, logging, or WAF in this local setup</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats container">
+        <div>
+          <strong id="control-count">0</strong>
+          <span>controls reviewed</span>
+        </div>
+        <div>
+          <strong id="partial-count">0</strong>
+          <span>partially covered</span>
+        </div>
+        <div>
+          <strong id="gap-count">0</strong>
+          <span>gaps identified</span>
+        </div>
+      </section>
+
+      <section class="container" id="controls">
+        <div class="section-heading">
+          <p class="eyebrow">Control matrix</p>
+          <h2>Sample AWS 800-53 control review</h2>
+        </div>
+        <div class="filters" id="family-filters"></div>
+        <div class="table-card">
+          <table>
+            <thead>
+              <tr>
+                <th>Control</th>
+                <th>Family</th>
+                <th>Status</th>
+                <th>Evidence</th>
+                <th>Priority</th>
+              </tr>
+            </thead>
+            <tbody id="control-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="container" id="findings">
+        <div class="section-heading">
+          <p class="eyebrow">Key findings</p>
+          <h2>A quick read of where this local demo stands today.</h2>
+        </div>
+        <div class="findings-grid">
+          <article class="finding-card">
+            <h3>Identity and access</h3>
+            <p>No users, no auth flow, and no role separation. This would need IAM, MFA, and least-privilege controls before production.</p>
+          </article>
+          <article class="finding-card">
+            <h3>Logging and monitoring</h3>
+            <p>There is no CloudTrail, GuardDuty, or centralized alerting in this local-only setup.</p>
+          </article>
+          <article class="finding-card">
+            <h3>Data protection</h3>
+            <p>Static pages do not yet demonstrate encryption, backup strategy, or secure storage controls.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <p>© 2026 TraderRaiders security review demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

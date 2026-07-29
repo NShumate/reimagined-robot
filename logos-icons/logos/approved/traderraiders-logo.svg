@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-label="TraderRaiders logo">
+  <rect width="1200" height="400" fill="none" />
+  <rect x="40" y="40" width="320" height="320" rx="68" fill="#07110d" />
+  <path d="M142 250 L210 150 L285 150 L235 220 L310 220 L194 320 L140 320 Z" fill="#ff7a1a" />
+  <path d="M150 250 L231 156" stroke="#f3f5f2" stroke-width="24" stroke-linecap="round" />
+  <circle cx="232" cy="152" r="24" fill="#f3f5f2" />
+  <text x="420" y="205" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="4" fill="#07110d">TRADER</text>
+  <text x="420" y="295" font-family="Inter, Arial, sans-serif" font-size="84" font-weight="800" letter-spacing="4" fill="#ff7a1a">RAIDERS</text>
+</svg>

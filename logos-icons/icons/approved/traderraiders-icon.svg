@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="TraderRaiders icon">
+  <rect width="320" height="320" rx="68" fill="#07110d" />
+  <path d="M90 220 L160 110 L230 110 L180 180 L250 180 L140 280 L90 280 Z" fill="#ff7a1a" />
+  <path d="M100 220 L168 128" stroke="#f3f5f2" stroke-width="20" stroke-linecap="round" />
+  <circle cx="168" cy="124" r="22" fill="#f3f5f2" />
+</svg>
